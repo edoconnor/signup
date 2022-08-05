@@ -1,0 +1,10 @@
+<h2>Search Registered Runners</h2>
+<form action="/runners" method="GET">
+  <label>Name</label>
+  <input type="text" name="name" value="<%= searchOptions.name %>" />
+  <button type="submit">Search</button>
+</form>
+<br />
+<% runners.forEach(runner => { %>
+<div><%= runner.name %></div>
+<% }) %>
